@@ -3,7 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles: [
+    `
+    li {
+      cursor: pointer;
+    }
+    `
+  ]
 })
 export class AppComponent {
   title = 'TestAppi';

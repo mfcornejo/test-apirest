@@ -1,0 +1,41 @@
+<h2>Buscar</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="buscar()" autocomplete="off">
+            <input  type="text"
+                    name="termino" 
+                    class="form-control"
+                    [(ngModel)]="termino"
+                    placeholder="Nombre...">
+        </form>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>CITY</th>
+                    <th>PHONE</th>
+                </tr>
+            </thead>
+            <tbody>
+                   <tr *ngFor="let user of usuarios; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.address.city}}</td>
+                    <td>{{user.phone}}</td>
+                   </tr> 
+            </tbody>
+        </table>
+    </div>
+</div>
